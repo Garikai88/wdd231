@@ -1,0 +1,35 @@
+@media screen and (min-width: 640px) {
+    nav {
+        display: block;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .about-photo {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-me, .student-photo {
+        flex: 1;
+        padding: 1rem;
+    }
+
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .courses .filters {
+        justify-content: center;
+    }
+}
+

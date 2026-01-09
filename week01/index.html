@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
     <title>WDD 231</title>
 </head>
-<body>
-    
+<main>
+    <header>
+        <div class="header-left">
+            <img src="images/home.svg" alt="Home Icon" class="home-icon">
+            <span class="site-name">Garikai Munamato Mangobe</span>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chamber/index.html">Chamber</a></li>
+                    <li><a href="final/index.html">Final</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>        
+    </header>
+
+    <h1>
+        <h1>Home</h1>
+
+            <section class="about-photo">
+                <div class="about-me">
+                    <h2>About Me</h2>
+                    <p>I'am Garikai Munamato Mangobe, an author, educator, and digital entrepreneur from Zimbabwe. I am proudly based in Harare, the nation's capital. My journey blends creativity with technology. From publishing ebooks and music projects to designing software and building web solutions. Currently, I am studying Software Development at BYU Pathway as I have developed a speciality in web designing, branding, and responsive Development, with a growing expertise in Python and C#. I thrive on turning ideas into impactful digital products, whether it's fintech innovations like MobiBank+, educational platforms, or resilience-focused content. Driven by a vision to scale solutions globally, I bring resilience, creativity, and technical precision to every project that I pursue.</p>
+                </div>
+                <div class="student-photo">
+                    <h2>student Photo</h2>
+                    <img src="images/student-photo.jpg" alt="Garikai Munamato Mangobe" width="200">
+                </div>
+            </section>
+
+            <section class="courses">
+                <h2>Web Certificate Courses</h2>
+                <div class="filters">
+                    <button data-filter="all">All</button>
+                    <button data-filter="CSE">CSE</button>
+                    <button data-filter="WDD">WDD</button>
+                </div>
+
+                <div id="course-list"></div>
+                <p class="credits">Total Credits: <span id="credits">0</span>.</p>
+            </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="LinkdIn"></a>
+            <a href="https://github.com/Garikai88" target="_blank"><img src="images/github.svg" alt="GitHub"></a>
+            <a href="https://facebook.com/GarikaiAmarekaiMangobe" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
+        </div>
+        <p>&copy; <span id="year"></span> Garikai Munamato Mangobe Harare, Zimbabwe </p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
 </body>
 </html>
