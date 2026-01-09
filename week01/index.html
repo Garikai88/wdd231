@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garikai Munamato Mangobe's personal homepage showcasing web development projects, BYU Pathway progress and digital entrepreneurship.">
+    <meta name="author" content="Garikai Munamato Mangobe">
+    <title>WDD 231</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+    
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
-    <title>WDD 231</title>
 </head>
 <main>
     <header>
         <div class="header-left">
-            <img src="images/home.svg" alt="Home Icon" class="home-icon">
+            <img src="images/home.svg" alt="Site Logo" class="home-icon">
             <span class="site-name">Garikai Munamato Mangobe</span>
             <nav id="main-nav">
                 <ul>
@@ -27,8 +35,10 @@
         <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>        
     </header>
 
-    <h1>
+    <main>
         <h1>Home</h1>
+
+            <!-- Section 1 -->
 
             <section class="about-photo">
                 <div class="about-me">
@@ -37,9 +47,11 @@
                 </div>
                 <div class="student-photo">
                     <h2>student Photo</h2>
-                    <img src="images/student-photo.jpg" alt="Garikai Munamato Mangobe" width="200">
+                    <img src="images/student-photo.jpg" alt="Potrait ogf Garikai Munamato Mangobe" width="200">
                 </div>
             </section>
+
+            <!-- Section 2 -->
 
             <section class="courses">
                 <h2>Web Certificate Courses</h2>
@@ -52,14 +64,26 @@
                 <div id="course-list"></div>
                 <p class="credits">Total Credits: <span id="credits">0</span>.</p>
             </section>
+
+            <!-- Section 3 -->
+            <section class="contact">
+                <h2>Connect With Me</h2>
+                <p>Follow me on social media to explore my latest projects and updates.</p>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/" target="_blank">
+                        <img src="images/linkedin.svg" alt="Connect with Garikai on LinkedIn">
+                    </a>
+                    <a href="https://github.com/Garikai88" target="_blank">
+                        <img src="images/github.svg" alt="View Garikai's GitHub profile">
+                    </a>
+                    <a href="https://facebook.com/GarikaiAmerekaiMangobe" target="_blank">
+                        <img src="images/facebook.svg" alt="Follow Garikai on Facebook">
+                    </a>
+                </div>
+            </section>
     </main>
 
     <footer>
-        <div class="social-icons">
-            <a href="https://linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="LinkdIn"></a>
-            <a href="https://github.com/Garikai88" target="_blank"><img src="images/github.svg" alt="GitHub"></a>
-            <a href="https://facebook.com/GarikaiAmarekaiMangobe" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
-        </div>
         <p>&copy; <span id="year"></span> Garikai Munamato Mangobe Harare, Zimbabwe </p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
