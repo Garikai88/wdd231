@@ -96,7 +96,7 @@ function displayCourses(courseArray) {
             <h3>${course.subject} ${course.number} - ${course.title}</h3>
             <p><strong>Credits:</strong> ${course.credits}</p>
             <p><strong>Certificate:</strong> ${course.certificate}</p>
-            <p><strong>Technologies:</strong>${course.technology.join(",")}</p>
+            <p><strong>Technologies:</strong>${course.technology.join(", ")}</p>
             <p><strong>Status:</strong> ${course.completed ? "✅ Completed" : "❌ Not Completed"}</p>
         `;
         
@@ -121,10 +121,10 @@ function filterCourses(type) {
 }
 
 // Event listeners for buttons 
-document.addEventListener("DOMContenetLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     displayCourses(courses); // Initial load
 
-    document.querySelectorAll(".Filters button").forEach(button => {
+    document.querySelectorAll(".filters button").forEach(button => {
         button.addEventListener("click", () => {
             filterCourses(button.dataset.filter);
         });

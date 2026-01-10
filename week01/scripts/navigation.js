@@ -14,4 +14,9 @@ function setupMenuToggle(toggleId, navId) {
 
 document.addEventListener("DOMContentLoaded", () => {
     setupMenuToggle("menu-toggle", "main-nav");
+    links.forEach(link => {
+        if (link.href.includes(location.pathname)) {
+            link.classList.add("active");
+        }
+    });
 });
