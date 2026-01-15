@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Discover local businesses and services in Harare Chamber of Commerce.">
+    <meta name="author" content="Garikai Munamato Mangobe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Harare Chamber of Commerce Directory">
+    <meta property="og:description" content="Explore and connect with local businesses in Chamber of Commerce.">
+    <meta property="og:image" content="https://GarikaiAmarekaiMangobe.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yourdomain.com/directory.html">
+    
+    <title>Harare Chamber of Commerce Directory</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Harare Chamber Logo" class="logo">
+        </div> 
+                                  
+            <nav class="center-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+            <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+              
+    </header>
+    
+    <main>
+        <!-- Directory toggle and member cards will go here --> 
+         <section class="hero">
+            <img src="images/heroimage.png" alt="Chamber Hero Image">
+            <button>Keynote Tickets</button>
+         </section>    
+         
+         <section id="events">
+            <h2>Events</h2>
+            <!-- For Future Events -->
+         </section>
+
+         <section id="member-container" class="grid">
+            <!-- The cards will go here via JS -->
+         </section>
+
+         <section id="current-weather">
+            <h2>Current Weather</h2>
+            <p>75℉ - Partly Cloudy</p>
+            <p>High: 85℉ | Low: 52℉</p>
+            <p>Humidity: 34%</p>
+            <p>Sunrise: 7:30am | Sunset: 9:59pm</p>
+         </section>
+
+         <section id="forecast">
+            <h2>Weather Forecast</h2>
+            <ul>
+                <li>Today: 90℉</li>
+                <li>Wednesday: 89℉</li>
+                <li>Thursday: 68℉</li>
+            </ul>
+
+         </section>
+    </main>
+
+    <footer>
+        <p>Harare Chamber Of Commerce</p>
+        <p> 1054 Nelson Mandela , Harare, Zimbabwe</p>
+        <p>Email:info@hararecc.zw | Phone: (+263) 1111 9087</p>
+        <p>WDD 231 Class Project | Garikai Munamato Mangobe</p>
+        <p>&copy; <span id="year"> Harare Chamber Of Commerce</span></p>
+        <p>Last Modified:<span id="lastModified"></span></p>
+        <div class="social-icons">
+            <img src="images/whatsapp.svg" alt="Whatsapp">
+            <img src="images/facebook.svg" alt="Facebbok">
+            <img src="images/linkedin.svg" alt="Linkedin">
+        </div>
+
+        <script>
+            // Set current year
+            document.getElementById("year").textContent = new Date().getFullYear();
+
+            // Set last modified date 
+            document.getElementById("lastModified").textContent = document.lastModified;
+        </script>
+    </footer>
+</body>
+</html>

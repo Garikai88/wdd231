@@ -1,0 +1,33 @@
+{
+    "familyName": "Mangobe",
+    "dateMovedIn": "2026-01-10",
+    "numberOfPeople": 4,
+    "visitedByBishopric": true,
+    "members": [
+        {
+            "name": "Garikai",
+            "gender": "Male",
+            "birthdate": "1995-06-15"
+        },
+        {
+            "name": "Kudzaishe",
+            "gender": "Male",
+            "birthdate": "1992-02-19"
+        },
+        {
+            "name": "Winfrida",
+            "gender": "Female",
+            "birthdate": "1961-06-13"
+        },
+        {
+            "name": "Ruvimbo",
+            "gender": "Female",
+            "birthdate": "1996-05-10"
+        },
+        {
+            "name": "Panashe",
+            "gender": "Male",
+            "birthdate": "1998-07-07"
+        }
+    ]
+}

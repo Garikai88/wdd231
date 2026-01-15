@@ -1,0 +1,77 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+    background: linear-gradient(to bottom right, #f4f4f4, #e8ebf9);
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2a2a72;
+}
+
+/* Grid container */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Individual card */
+section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.03);
+}
+
+/* Prophet name */
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a40;
+}
+
+/* Portrait image */
+section img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Additional info */
+section p {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    color: #555;
+}
+
+section p::before {
+    content: '🎉';
+    display: inline-block;
+    margin-right: 4px;
+    color: #2a2a72;
+}
+
+section p:nth-of-type(2)::before{
+    content: '🎈';
+}
+
+section:focus-within {
+    outline: 2px solid #2a2a72;
+    outline-offset: 4px;
+}

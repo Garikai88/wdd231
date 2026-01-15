@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Aston Tiles",
+        "address": "234 Chinhoyi Street, Harare",
+        "phone": "011 234 675",
+        "website": "https://astontilesafrica.com",
+        "image": "astontiles.jpg",
+        "membership": "gold",
+        "tagline": "Building Zimbabwe, one tile after tile"
+    },
+
+    {
+        "name": "Amalgamated Motor Company",
+        "address": "213 silundika avenue, Harare",
+        "phone": "011 556 789",
+        "website": "https://amalgamatedmotorgroup.zw",
+        "image": "amalgamatedmotorgroup.jpg",
+        "membership": "gold",
+        "tagline": "All my money is going"
+
+    },
+
+    {
+        "name": "Africa Construction Company",
+        "address": "255 Simon Mazorodze street, Harare",
+        "phone": "011 256 489",
+        "website": "https://africaconstruction.zw",
+        "image": "africaconstruction.jpg",
+        "membership": "silver",
+        "tagline": "Building on the foundation of the people"
+    },
+
+    {
+        "name": "Nungu Fintech Technology",
+        "address": "256 Adelaide drive, Avondale, Harare",
+        "phone": "011 235 600",
+        "image": "nungufintechtechnology.jpg",
+        "membership": "platinum",
+        "tagline": "Technological development at its core",
+    },
+
+    {
+        "name": "Mimie's Boutique",
+        "address": "456 Robert Mugabe street, Palmridge, Harare",
+        "phone": "011 345 671",
+        "image": "mimiesboutique.jpg",
+        "membership": "silver",
+        "tagline": "Clothing the next generation"
+    }
+]
