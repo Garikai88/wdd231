@@ -8,7 +8,7 @@
 
     <meta property="og:title" content="Harare Chamber of Commerce Directory">
     <meta property="og:description" content="Explore and connect with local businesses in Chamber of Commerce.">
-    <meta property="og:image" content="imsges/og-image.jpg">
+    <meta property="og:image" content="images/og-image.jpg">
     <meta property="og:url" content="https://garikai88.github.io/wdd231/chamber/images/preview.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
             <img src="images/logo.jpg" alt="Harare Chamber Of Commerce Logo" class="logo">
         </div> 
                                   
-            <nav class="center-nav">
+            <nav id="center-nav" class="center-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="directory.html">Directory</a></li>
@@ -42,21 +42,31 @@
     
     <main>
         <h1>Harare Chamber Of Commmerce Directory</h1>
-        <!-- Directory toggle and member cards will go here --> 
-         <section class="hero">
+
+        <!-- Hero Section --> 
+         <section id="member-container" class="grid">
             <img src="images/heroimage.jpg" alt="Main banner showing Harare Chamber of Commerce building">
             <button>Keynote Tickets</button>
-         </section>    
+         </section>
          
+         <!-- Events Section -->
          <section id="events">
             <h2>Events</h2>
             <!-- For Future Events -->
          </section>
 
+         <!-- View Toggle -->
+         <div class="view-toggle">
+            <button id="gridView">Grid View</button>
+            <button id="listview">List View</button>
+         </div>
+
+         <!-- Members Directory -->
          <section id="member-container" class="grid">
             <!-- The cards will go here via JS -->
          </section>
 
+         <!-- Weather Section -->
          <section id="current-weather">
             <h2>Current Weather</h2>
             <p>75℉ - Partly Cloudy</p>
@@ -76,6 +86,7 @@
          </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>Harare Chamber Of Commerce</p>
         <p> 1054 Nelson Mandela , Harare, Zimbabwe</p>

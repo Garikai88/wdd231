@@ -1,18 +1,27 @@
 const url = 'data/members.json';
 
+// Fetch members using asyc/wait
 async function getMembers() {
-    const response = await fetch(url);
-    const data = await response.json();
-    displayMembers(data);
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        displayMembers(data); // Paases the JSON array to display function
+    } catch (error) {
+        console.error('Error fetching members:', error);
+    }
 }
-
+    
+// Display members dynamically
 function displayMembers(members) {
-    const container = document.querySelector('#member-container');
+    const container = document.querySelector('member-container');
     container.innerHTML = ''; // Clear previous content
 
     members.forEach(member => {
-        const card = document.createElement('section');
-        card.cardList.add('card');
+        const card = document.createElement('div');
+        card.cardList.add('member-card');
 
         card.innerHTML = `
         <img src= "images/${member.image}" alt="${member.name}">
@@ -28,8 +37,23 @@ function displayMembers(members) {
     });
 }
 
-getMembers();
+// Toggle between grid and list views
+function setupToggle() {
+    const container = document.getElementById('members-container');
+    const gidBtn = document.getElementById('gridView');
+    const listBtn = document.getElementById('listView');
 
-document.getElementById("menu-toggle").addEventListener("click", () => {
-    document.getElementById("main-nav").classList.toggle("hidden");
-});
+    gridBtn.addEventListener('click', () => {
+        container.classList.add('grid');
+        container.classList.remove('list');
+    });
+
+    listBtn.addEventListener('click', () => {
+        container.classList.add('list');
+        container.classList.remove('grid');
+    });
+}
+
+// Initialize
+getMembers();
+setupToggle();
