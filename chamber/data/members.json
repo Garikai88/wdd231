@@ -1,73 +1,76 @@
 [
     {
         "name": "Aston Tiles",
+        "tagline": "Building Zimbabwe, one tile at a time",
         "address": "234 Chinhoyi Street, Harare",
-        "phone": "011 234 675",
-        "website": "https://astontilesafrica.com",
-        "image": "astontiles.jpg",
+        "phone": "+263 11 234 675",
+        "website": "https://astontilesafrica.co.zw",
         "membership": "gold",
-        "tagline": "Building Zimbabwe, one tile after tile"
+        "image": "astontiles.jpg"
+        
     },
 
     {
         "name": "Amalgamated Motor Company",
+        "tagline": "All my money is going",
         "address": "213 silundika avenue, Harare",
-        "phone": "011 556 789",
+        "phone": "+263 11 556 789",
         "website": "https://amalgamatedmotorgroup.zw",
-        "image": "amalgamatedmotorgroup.jpg",
         "membership": "gold",
-        "tagline": "All my money is going"
+        "image": "amalgamatedmotorgroup.jpg"
 
     },
 
     {
         "name": "Africa Construction Company",
+        "tagline": "Building on the foundation of the people",
         "address": "255 Simon Mazorodze street, Harare",
-        "phone": "011 256 489",
-        "website": "https://africaconstruction.zw",
-        "image": "africaconstruction.jpg",
+        "phone": " +263 11 256 489",
+        "website": "https://africaconstruction.co.zw",
         "membership": "silver",
-        "tagline": "Building on the foundation of the people"
+        "image": "africaconstruction.jpg"
+        
     },
 
     {
         "name": "Nungu Fintech Technology",
+        "tagline": "Technological development at its core",
         "address": "256 Adelaide drive, Avondale, Harare",
-        "phone": "011 235 600",
-        "website": "https://nungufintechtechnology.zw",
-        "image": "nungufintechtechnology.jpg",
+        "phone": "+263 11 235 600",
+        "website": "https://nungufintechtechnology.co.zw",
         "membership": "member",
-        "tagline": "Technological development at its core"
+        "image": "nungufintechtechnology.jpg"
+        
     },
 
     {
         "name": "Mimie's Boutique",
+        "tagline": "Clothing the next generation",
         "address": "456 Robert Mugabe street, Palmridge, Harare",
-        "phone": "011 345 671",
-        "website": "https://mimiesboutique.zw",
-        "image": "mimiesboutique.jpg",
+        "phone": "+263 11 345 671",
+        "website": "https://mimiesboutique.co.zw",
         "membership": "silver",
-        "tagline": "Clothing the next generation"
+        "image": "mimiesboutique.jpg"
     },
 
     {
         "name": "Liquid Technologies",
+        "tagline": "Technology that flows",
         "address": "675 Jason Moyo Avenue, Pamona, Harare",
-        "phone": "011 876 234",
-        "website": "https://liquidtechnologies.zw",
-        "image": "liquidtechnologies.jpg",
+        "phone": "+263 11 876 234",
+        "website": "https://liquidtechnologies.co.zw",
         "membership": "gold",
-        "tagline": "Technology that flows"            
+        "image": "liquidtechnologies.jpg"            
     },
 
     {
         "name": "Mama Africa Cousins",
+        "tagline": "The heart of Africa in the pot",
         "address": "1887 Leopold Takawira Avenue, Avonlee, Harare",
-        "phone": "011 234 445",
-        "website": "https://mamaafricacousins.zw",
-        "image": "mamaafricacousins.jpg",
+        "phone": "+263 011 234 445",
+        "website": "https://mamaafricacousins.co.zw",
         "membership": "member",
-        "tagline": "The heart of Africa is in the pot"
+        "image": "mamaafricacousins.jpg"
     }
 
 

@@ -4,24 +4,23 @@ const url = 'data/members.json';
 async function getMembers() {
     try {
         const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
         const data = await response.json();
-        displayMembers(data); // Paases the JSON array to display function
+        displayMembers(data.members);
     } catch (error) {
-        console.error('Error fetching members:', error);
+        console.error("Error fetching members:", error);
+
     }
 }
+   
     
 // Display members dynamically
 function displayMembers(members) {
-    const container = document.querySelector('member-container');
+    const container = document.querySelector('#members-container');
     container.innerHTML = ''; // Clear previous content
 
     members.forEach(member => {
         const card = document.createElement('div');
-        card.cardList.add('member-card');
+        card.classList.add('member-card');
 
         card.innerHTML = `
         <img src= "images/${member.image}" alt="${member.name}">
@@ -40,7 +39,7 @@ function displayMembers(members) {
 // Toggle between grid and list views
 function setupToggle() {
     const container = document.getElementById('members-container');
-    const gidBtn = document.getElementById('gridView');
+    const gridBtn = document.getElementById('gridView');
     const listBtn = document.getElementById('listView');
 
     gridBtn.addEventListener('click', () => {
