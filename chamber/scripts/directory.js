@@ -5,6 +5,13 @@ async function getMembers() {
     try {
         const response = await fetch(url);
         const data = await response.json();
+        console.log("Fetch data:", data);
+
+        if (!data.members || !Array.isArray(data.members)) {
+            console.error("Invalid data format: 'members' not found or not an array");
+            return;
+        }
+
         displayMembers(data.members);
     } catch (error) {
         console.error("Error fetching members:", error);

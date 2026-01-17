@@ -1,4 +1,5 @@
-[
+{
+    "members": [
     {
         "name": "Aston Tiles",
         "tagline": "Building Zimbabwe, one tile at a time",
@@ -64,14 +65,15 @@
     },
 
     {
-        "name": "Mama Africa Cousins",
+        "name": "Mama Africa Cuisine",
         "tagline": "The heart of Africa in the pot",
         "address": "1887 Leopold Takawira Avenue, Avonlee, Harare",
         "phone": "+263 011 234 445",
-        "website": "https://mamaafricacousins.co.zw",
+        "website": "https://mamaafricacuisine.co.zw",
         "membership": "member",
-        "image": "mamaafricacousins.jpg"
+        "image": "mamaafricacuisine.jpg"
     }
 
+    ]
 
-]
+}
