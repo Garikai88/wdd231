@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Welcome to the Harare Chamber of Commerce. Discover events, weathe, and spotlighted businesses.">
+    <meta name="author" content="Garikai Munamato Mangobe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Harare Chamber of Commerce Home">
+    <meta property="og:description" content="Connect with local businesses and explore upcoming events.">
+    <meta property="og:image" content="https://garikai88.github.io/wdd231/chamber/images/banner.jpg">
+    <meta property="og:url" content="https://garikai88.github.io/wdd231/chamber/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <title>Harare Chamber of Commerce Home</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Harare Chamber Of Commerce Logo" class="logo">
+        </div> 
+                                  
+            <nav id="center-nav" class="center-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+            <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+              
+    </header>
+    
+    <main>
+        <h1>Welcome to the Harare Chamber Of Commerce</h1>
+
+        <!-- Hero Section -->
+         <section class="hero">
+            <h2>Empowering Local Business</h2>
+            <img src="images/heroimage.jpg" alt="Main banner showing Harare Chamber of Commerce building">
+         </section>
+         
+         <!-- Call to Action -->
+         <section class="cta">
+            <h2>Become a Member</h2>
+            <p>Join the Harare Chamber of Commerce and grow your business with community support. </p>
+            <a href="join.html" class="cta-button">Join Now</a>
+         </section>
+
+         <!--   Events Section -->
+         <section id="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Business Networking Breakfast - Jan 25</li>
+                <li>Local Market Expo - Feb 10</li>
+            </ul>
+         </section>
+
+         <!-- Current Weather Section -->
+         <section id="current-weather" class="weather-card">
+            <h2>Current Weather</h2>
+            <div class="weather-info">
+                <img id="weather-icon" alt="">
+                <div>
+                    <p id="current-temp"></p>
+                    <p id="feels-like"></p>
+                    <p id="humidity"></p>
+                    <figcaption></figcaption>
+                </div>
+            </div>
+         </section>
+
+         <!-- Forecast Section -->
+          <section id="forecast" class="weather-card">
+            <h2>Weather Forecast</h2>
+            <ul></ul>
+          </section>
+
+
+         <!-- Company Spotlights -->
+        <section id="spotlights">
+            <h2>Business Spotlights</h2>
+            <div class="spotlight">
+                <h3>Africa Construction</h3>
+                <p>Innovative infrastructure solutions for Zimbabwe's future.</p>
+            </div>
+            <div class="spotlight">
+                <h3>Amalgamated Motor Company</h3>
+                <p>Providing quality vehicles and services for the local market.</p>
+            </div>
+            <div class="spotlight">
+                <h3>Liquid Technologies</h3>
+                <p>Connecting the country through innovative solutions.</p>
+            </div>
+
+            <button id="dark-mode-toggle">🌙Toggle Dark Mode</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Harare Chamber Of Commerce</p>
+        <p> 1054 Nelson Mandela , Harare, Zimbabwe</p>
+        <p>Email:info@hararecc.zw | Phone: (+263) 1111 9087</p>
+        <p>WDD 231 Class Project | Garikai Munamato Mangobe</p>
+        <p>&copy; <span id="year"> Harare Chamber Of Commerce</span></p>
+        <p>Last Modified:<span id="lastModified"></span></p>
+        <div class="social-icons">
+            <img src="images/whatsapp.svg" alt="Whatsapp icon for Harare Chamber">
+            <img src="images/facebook.svg" alt="Facebook icon for Harare Chamber">
+            <img src="images/linkedin.svg" alt="Linkedin icon for Harare Chamber">
+        </div>      
+    </footer>
+</body>
+</html>
