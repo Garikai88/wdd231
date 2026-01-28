@@ -228,6 +228,10 @@ section {
     transform: scale(1.1);
 }
 
+#weather-icon[src=""] {
+    display: none;
+}
+
 #current-temp {
     font-size: 2rem;
     font-weight: bold;
