@@ -343,22 +343,67 @@ section {
 
 /* Spotlights */
 #spotlights {
+   background-color: #f9f9f9;
+   padding: 2rem;
+   margin: 2rem 0;
+   border-radius: 8px;
+}
+
+.spotlight-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
-.spotlight-card {
-    background: #fafafa;
+
+.spotlight {
+    background: #fff;
     padding: 1rem;
-    border-radius: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.spotlight-card:hover {
+.spotlight p {
+    margin-bottom: 0.75rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.spotlight-image {
+    width: 100px;
+    height: auto;
+    margin: 0.5rem;
+    border-radius: 4px;
+
+}
+
+.spotlight h3 {
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+
+.spotlight-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.spotlight-link:hover {
+    text-decoration: underline;
+}
+
+
+.spotlight:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+
 
 /* Dark Mode Theme */
 body.dark-mode {

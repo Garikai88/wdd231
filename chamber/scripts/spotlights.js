@@ -3,18 +3,25 @@ async function loadSpotlights() {
         const response = await fetch('data/members.json');
         const data = await response.json();
 
-        const eligible = data.members.filter(m => m.membership === 'Gold' || m.membership === 'Silver');
-        const shuffled = eligible.sort(() => 0.5 - Math.random());
-        const selected = shuffled.slice(0,3);
+        // Normalize membership check
+        const eligible = data.members.filter(m => 
+            m.membership === 'gold' || m.membership.toLowerCase() === 'silver'
+        );
 
-        const container = document.querySelector('#spotlights');
+        // Shuffle and select 3
+        const shuffled = eligible.sort(() => 0.5 - Math.random());
+        const selected = shuffled.slice(0, 3);
+
+
+        // Target the gid container
+        const container = document.querySelector('.spotlight-grid');
         container.innerHTML = selected.map(member => `
-            <div class="spotlight-card>
-                <img src="${member.logo}" alt="${member.name} logo">
+            <div class="spotlight">
+                <img src="images/${member.image}" alt="${member.name} logo" class="spotlight-image">
                 <h3>${member.name}</h3>
                 <p>${member.address}</p>
                 <p>${member.phone}</p>
-                <a href="${member.website}" target="_blank">Visit Website</a>
+                <a href="${member.website}" target="_blank" class="spotlight-link">Visit Website</a>
                 <p><strong>${member.membership} Member</strong></p>
             </div>`
         ).join('');
