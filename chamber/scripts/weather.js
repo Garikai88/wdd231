@@ -97,6 +97,13 @@ window.addEventListener("DOMContentLoaded", () => {
     fetchForecast(); // 3 day forecast
 })
 
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('show');
+});
+
 // Dark mode toggle
 const toggleBtn = document.querySelector('#dark-mode-toggle');
 if (toggleBtn) {
