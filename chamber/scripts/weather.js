@@ -13,6 +13,7 @@ const captionDesc = document.querySelector('#weather-desc');
 const feelsLikeEl = document.querySelector('#feels-like');
 const humidityEl = document.querySelector('#humidity');
 
+
 // Async function to fetch current weather data
 async function apiFetch() {
     try {
@@ -88,6 +89,7 @@ async function fetchForecast() {
     
     } catch (error) {
         console.error('Forecast fetch failed:', error);
+        if (currentTemp) currentTemp.textContent = "Weather data unavailable";
     }
 }
 
