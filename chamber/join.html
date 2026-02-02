@@ -16,7 +16,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     
-    <title>Harare Chamber of Commerce</title>
+    <title>Join - Harare Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -51,7 +51,7 @@
                 <input id="firstname" type="text" name="firstname" title="First Name" autocomplete="given-name" required>
 
                 <label for="lastname">Last Name*</label>
-                <input id="lastname" type="text" name="lastname" title="Last Name" autocomplete="family-name" requierd>
+                <input id="lastname" type="text" name="lastname" title="Last Name" autocomplete="family-name" required>
 
                 <label for="org-title">Organizational Title*</label>
                 <input id="org-title" type="text" name="org-title" title="Title (min 7 characters, letters/hyphens/spaces only)" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title" required>
@@ -69,14 +69,15 @@
                 <label for="organization">Business/Organization Name*</label>
                 <input id="organization" type="text" name="organization" title="Business Name" autocomplete="organization" required>
 
-                <label for="membership-level">Membership Level*</label>
-                <selcet id="membership-level" name="membership-level" required>
-                    <option value=""disabled selected>Choose your level...</option>
-                    <option value="np">NP Membership (No fee for non-profits)</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
+                <label for="membership-level">Membership Level
+                    <select id="membership-level" name="membership-level" required>
+                        <option value="" disabled selected>Select a level</option>
+                        <option value="np">Non-Profit (NP)</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </label>    
 
                 <label for="description">Business Description</label>
                 <textarea id="description" name="description" rows="4" title="Description"></textarea>
@@ -89,7 +90,7 @@
         <!-- Membership Cards -->
         <section class="membership-cards">
             <div class="membership-card">
-                <h3>Np Membership</h3>
+                <h2>Np Membership</h2>
                 <p>No fee for non-profits.</p>
                 <button data-modal="npModal">Learn More</button>
             </div>

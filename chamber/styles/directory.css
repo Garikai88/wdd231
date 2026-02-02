@@ -35,7 +35,6 @@ header {
    align-items: center;
    background: linear-gradient(to right, #004080, #0059b3);
    color: #ffffff;
-   background-color: #004080;
    padding: 1rem 2rem;
 }
 
@@ -483,17 +482,18 @@ body, header, section, .weather-card {
     border-radius: 8px;
     background: #f9f9f9;
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease forwards;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .membership-card p {
     color: #212121;
 }
 
-.membership-card:nth-child(2) { animation-delay: 0.3s; }
+.membership-card:nth-child(1) { animation-delay: 0.2s; }
+.membership-card:nth-child(2) { animation-delay: 0.4s; }
 .membership-card:nth-child(3) { animation-delay: 0.6s; }
-.membership-card:nth-child(4) { animation-delay: 0.9s; }
+.membership-card:nth-child(4) { animation-delay: 0.8s; }
 
 /* Modal stling */
 .modal {
@@ -644,6 +644,19 @@ footer p {
     * {
         animation: none;
         transition: none;
+    }
+}
+
+@media (min-width: 900px) {
+    .join-container {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .membership-cards {
+        flex-direction: column;
     }
 }
 
