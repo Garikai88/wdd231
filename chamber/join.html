@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-ZW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Welcome to the Harare Chamber of Commerce. Discover events, weather, and spotlighted businesses.">
+    <meta name="author" content="Garikai Munamato Mangobe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Harare Chamber of Commerce Home">
+    <meta property="og:description" content="Connect with local businesses and explore upcoming events.">
+    <meta property="og:image" content="https://garikai88.github.io/wdd231/chamber/images/banner.jpg">
+    <meta property="og:url" content="https://garikai88.github.io/wdd231/chamber/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <title>Harare Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Harare Chamber Of Commerce Logo" class="logo">
+        </div> 
+                                  
+            <nav id="center-nav" class="center-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+            <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+              
+    </header>
+    
+    <main>
+        <h1>Membership Application</h1>
+        <p>Complete the form below to join our network of business professionals.</p>
+        <form method="get" action="thankyou.html" class="Membership-form">
+            <fieldset>
+                <legend>Application Information</legend>
+
+                <label for="firstname">First Name*</label>
+                <input id="firstname" type="text" name="firstname" title="First Name" autocomplete="given-name" required>
+
+                <label for="lastname">Last Name*</label>
+                <input id="lastname" type="text" name="lastname" title="Last Name" autocomplete="family-name" requierd>
+
+                <label for="org-title">Organizational Title*</label>
+                <input id="org-title" type="text" name="org-title" title="Title (min 7 characters, letters/hyphens/spaces only)" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title" required>
+
+                <label for="email">Email Address*</label>
+                <input id="email" type="email" name="email" placeholder="example@domain.com" title="Email" autocomplete="email" required>
+
+                <label for="phone">Mobile Phone Number*</label>
+                <input id="phone" type="tel" name="phone" title="Phone Number" autocomplete="tel" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Organizationn Details</legend>
+
+                <label for="organization">Business/Organization Name*</label>
+                <input id="organization" type="text" name="organization" title="Business Name" autocomplete="organization" required>
+
+                <label for="membership-level">Membership Level*</label>
+                <selcet id="membership-level" name="membership-level" required>
+                    <option value=""disabled selected>Choose your level...</option>
+                    <option value="np">NP Membership (No fee for non-profits)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+
+                <label for="description">Business Description</label>
+                <textarea id="description" name="description" rows="4" title="Description"></textarea>
+            </fieldset>
+
+            <input type="hidden" id="timestamp" name="timestamp">
+            <input type="submit" value="Submit Application" class="cta-button">
+        </form>
+
+        <!-- Membership Cards -->
+        <section class="membership-cards">
+            <div class="membership-card">
+                <h3>Np Membership</h3>
+                <p>No fee for non-profits.</p>
+                <button data-modal="npModal">Learn More</button>
+            </div>
+
+            <div class="membership-card">
+                <h3>Bronze Membership</h3>
+                <p>Affordable entry-level membership.</p>
+            </div>
+
+            <div class="membership-card">
+                <h3>Silver Membership</h3>
+                <p>Expanded benefits and discounts.</p>
+                <button data-modal="bronzeModal">Learn More</button>
+            </div>
+
+            <div class="membership-card">
+                <h3>Gold Membership</h3>
+                <p>Premium benefits and spotlight features.</p>
+                <button data-modal="goldModal">Learn More</button>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div id="npModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>NP Membership Benefits</h2>
+                <ul>
+                    <li>Free membership for NGOs</li>
+                    <li>Access to community events</li>
+                </ul>
+            </div>
+        </div>    
+
+        <div id="bronzeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <ul>
+                    <li>Network events</li>
+                    <li>Discounted training workshops</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="silverModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <ul>
+                    <li>Advertising opportunities</li>
+                    <li>Event discounts</li>
+                </ul>
+            </div>
+        </div>            
+
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <ul>
+                    <li>Premium spotlight positions</li>
+                    <li>Exclusive training and events</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Harare Chamber Of Commerce</p>
+        <p> 1054 Nelson Mandela , Harare, Zimbabwe</p>
+        <p>Email:info@hararecc.zw | Phone: (+263) 1111 9087</p>
+        <p>WDD 231 Class Project | Garikai Munamato Mangobe</p>
+        <p>&copy; <span id="year"> Harare Chamber Of Commerce</span></p>
+        <p>Last Modified:<span id="lastModified"></span></p>
+        <div class="social-icons">
+            <img src="images/whatsapp.svg" alt="Whatsapp icon for Harare Chamber">
+            <img src="images/facebook.svg" alt="Facebook icon for Harare Chamber">
+            <img src="images/linkedin.svg" alt="Linkedin icon for Harare Chamber">
+        </div>      
+    </footer>
+</body>
+</html>
