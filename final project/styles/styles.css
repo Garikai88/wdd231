@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #003366;
+    --secondary-color: #2E8B57;
+    --bg-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    margin: 20px;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+strong {
+    color: var(--secondary-color);
+}
+
+img {
+    display: block;
+    margin: 20px;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
