@@ -84,7 +84,7 @@ nav a:hover {
 }
 
 /* -- Discovery Layout -- */
-.dicovery-main {
+.discovery-main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -104,7 +104,7 @@ nav a:hover {
     grid-area: sidebar;
 }
 
-#discover-gird {
+#discover-grid {
     grid-area: grid;
     display: grid;
     grid-template-columns: 1fr;
@@ -118,7 +118,7 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* --- Discover Crda (Mosiac Components) --- */
+/* --- Discover Cards (Mosiac Components) --- */
 .discover-card {
     display: grid;
     grid-template-areas: 
@@ -151,6 +151,13 @@ section {
 
 .discover-card button:hover {
     background-color: #ffdb4d;
+}
+
+.discover-card figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 /* -- Responsive Media Queries -- */
@@ -186,7 +193,7 @@ section {
             "item8 item8";
     }
 
-    /* Assigning order for mosiac effect */
+    /* Requirement 10: Assigning nth-child to grid areas */
     .discover-card:nth-child(1) { grid-area: item1; }
     .discover-card:nth-child(2) { grid-area: item2; }
     .discover-card:nth-child(3) { grid-area: item3; }
@@ -197,7 +204,7 @@ section {
     .discover-card:nth-child(8) { grid-area: item8; }
 }
 
-/* Desktop - Large Mosiac & Hover (Criteria 12) */
+/* Desktop - Large Mosiac & Hover */
 @media (min-width: 1025px) {
     .discovery-main {
         grid-template-columns: 300px 1fr;
@@ -214,13 +221,13 @@ section {
             "item6 item7 item8";
     }
 
-    /* Requirement 12: Desktop-only hover effect */
+    /* Requirement 12: Desktop-only image effect */
     .discover-card img {
         transition: transform 0.3s ease-in-out, filter 0.3s ease;
     }
 
     .discover-card img:hover {
-        transform: scale(1.03);
+        transform: scale(1.05);
         filter: brightness(1.1);
         box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
