@@ -183,8 +183,25 @@ nav a:hover {
 main {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-areas: 
+            "hero"
+            "events"
+            "weather"
+            "forecast"
+            "spotlights";
     gap: 2rem;
     padding: 2rem;
+}
+
+.dicovery-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "title"
+        "sidebar"
+        "grid";
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
 
@@ -525,6 +542,58 @@ body, header, section, .weather-card {
     cursor: pointer;
 }
 
+/* Container for the 8 items of interest */
+#discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+}
+
+/* Card naming logic */
+.discover-card {
+    display: grid;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    /* Names Areas for clarity */
+    grid-template-areas: 
+            "title"
+            "photo"
+            "info"
+            "address"
+            "action";
+}
+
+.discover-card h2 { grid-area: title; color: #004080; }
+.discover-card figure { grid-area: photo; margin: 0; }
+.discover-card p { grid-area: info; }
+.discover-card address { grid-area: address; font-style: normal; font-weight: bold; }
+.discover-card button {
+    grid-area: action;
+    background-color: #ffcc00;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.discovery-main h1 {
+    grid-area: title;
+    text-align: center;
+}
+
+.stats-sidebar {
+    grid-area: sidebar;
+}
+
+#discover-grid {
+    grid-area: grid;
+}
+
+
+
 
 /* Footer */
 
@@ -611,6 +680,18 @@ footer p {
     
 }
 
+@media (min-width: 641px) {
+    #discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "item1 item2"
+            "item3 item3"
+            "item4 item5"
+            "item6 item7"
+            "item8 item8";
+    }
+}
+
 @media (min-width: 601px) {
     #menu-toggle {
         display: none;
@@ -631,12 +712,35 @@ footer p {
     }
 
     main {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "hero hero"
+            "events weather"
+            "forecast forecast"
+            "spotlights spotlights";
     }
 
     nav ul {
         flex-direction: row;
         gap: 2rem;
+    }
+
+    .discover-card {
+        grid-template-columns: 200px 1fr;
+        grid-template-areas: 
+            "photo title"
+            "photo info"
+            "photo address"
+            "photo action";
+        gap: 20px;
+    }
+
+    .dicovery-main {
+        grid-template-columns: 300px 1fr;
+        grid-template-areas: 
+            "title title"
+            "sidebar grid";
+        align-items: start;
     }
 }
 
@@ -660,6 +764,39 @@ footer p {
     }
 }
 
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: 1fr 350px;
+        grid-template-areas: 
+                "hero waether"
+                "spotlights events"
+                "spotlights forecast";
+    }
+}
+
+@media (min-width: 1025px) {
+    #discover-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "item1 item2 item3"
+            "item4 item4 item5"
+            "item6 item7 item8";
+        gap: 1.5rem;
+    }
+
+
+    /* Assigned each card to its named area */
+    .discover-card:nth-child(1)  {grid-area: item1; }
+    .discover-card:nth-child(2)  {grid-area: item2; }
+    .discover-card:nth-child(3)  {grid-area: item3; }
+    .discover-card:nth-child(4)  {grid-area: item4; } 
+    .discover-card:nth-child(5)  {grid-area: item5; } 
+    .discover-card:nth-child(6)  {grid-area: item6; } 
+    .discover-card:nth-child(7)  {grid-area: item7; }
+    .discover-card:nth-child(8)  {grid-area: item8; }
+
+    
+}
 
 
 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Discover local businesses and services in Harare Chamber of Commerce.">
+    <meta name="author" content="Garikai Munamato Mangobe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Discover Harare - Chamber of Commerce">
+    <meta property="og:description" content="Explore local points of interest in Harare, Zimbabwe.">
+    <meta property="og:image" content="https://garikai88.github.io/wdd231/chamber/images/banner.jpg">
+    <meta property="og:url" content="https://garikai88.github.io/wdd231/chamber/discover.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <title>Discover Harare - Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/discover.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.webp" alt="Harare Chamber Of Commerce Logo" class="logo">
+        </div> 
+                                  
+            <nav id="center-nav" class="center-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html" aria-current="page">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
+                </ul>
+            </nav>
+            <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+              
+    </header>
+    
+    <main class="discovery-main">
+        <h1>Discover Harare</h1>
+
+    
+        <aside class="stats-sidebar">
+            <section class="visit-card">
+                <h2>Your Visit</h2>
+                <p id="visitor-msg">Welcome! Lets us know if you have any questions.</p>
+            </section>
+            
+            <section class="demographics">
+                <h2>Harare Stats</h2>
+                <p>Population: 1.5 Million</p>
+                <p>Climate: Subtropical Highland</p>
+            </section>
+        </aside>
+
+        <section id="discover-grid"></section>
+
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Harare Chamber Of Commerce</p>
+        <p> 1054 Nelson Mandela , Harare, Zimbabwe</p>
+        <p>Email:info@hararecc.zw | Phone: (+263) 1111 9087</p>
+        <p>WDD 231 Class Project | Garikai Munamato Mangobe</p>
+        <p>&copy; <span id="year"> Harare Chamber Of Commerce</span></p>
+        <p>Last Modified:<span id="lastModified"></span></p>
+        <div class="social-icons">
+            <img src="images/whatsapp.svg" alt="Whatsapp icon for Harare Chamber">
+            <img src="images/facebook.svg" alt="Facebook icon for Harare Chamber">
+            <img src="images/linkedin.svg" alt="Linkedin icon for Harare Chamber">
+        </div>      
+    </footer>
+</body>
+</html>
