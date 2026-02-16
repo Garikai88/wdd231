@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Garikai">
     <meta name="description" content="MobiBank+ Site: Secure mobile-first banking with integrated financial tracking.">
-    <title>MobiBank+ | Financial Literacy</title>
 
-    <link rel="preconnect" href="https//fonts.googleapis.com">
-    <link rel="preconnect" href="https//fonts.gstatic.com " crossorigin>
-    <link rel="https//fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Garikai's Banking Dashboard">
+    <meta property="og:description" content="A secure and modern financial management dashboard.">
+    <meta property="og:image" content="https://garikai88.github.io/wdd231/images/site-preview.jpg">
+    <meta property="og:url" content="https://garikai88.github.io/wdd231/final-project/index.html">
 
+    <title>MobiBank+ | Financial Planning</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/main.js" defer></script>
@@ -17,7 +26,7 @@
 
 <body>
     <div id="side-overlay" class="overlay"></div>
-    
+
     <header>
         <div class="header-container">
             <button id="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
@@ -47,7 +56,7 @@
                         <a href="accounts.html">
                             <img src="images/wallet-icon.svg" alt="" width="20" height="20">Accounts
                         </a>
-                    </li>
+                    </li> 
 
                    <li>
                         <a href="transfer.html">
@@ -56,13 +65,13 @@
                     </li> 
 
                    <li>
-                        <a href="goals.html">
+                        <a href="goals.html" class="active" aria-current="page">
                             <img src="images/goal-icon.svg" alt="" width="20" height="20">Planning
                         </a>
                     </li> 
 
                    <li>
-                        <a href="literacy.html" class="active" aria-current="page">
+                        <a href="literacy.html">
                             <img src="images/book-icon.svg" alt="" width="20" height="20">Education
                         </a>
                     </li> 
@@ -71,39 +80,62 @@
         </aside>
 
         <main class="dashboard-main">
+            <h1>Financial Overview</h1>
             <section class="page-header">
-                <h2>Financial Education</h2>
+                <h2>Savings Goals</h2>
+                <button class="primary-btn">+ New Goal</button>
             </section>
 
-            <section class="literacy-content">
-                <article class="card article-card">
-                    <img src="images/security-tip.jpg" alt="Digital Security" class="article-img">
-                    <div class="article-body">
-                        <h3>5 Ways to Protect Your Account</h3>
-                        <p>Learn how to use Two-Factor Authentication (2FA) and recognize phishing attempts to keep your MobiBank+ data safe.</p>
-                        <a href="#" class="readmore">Read Article &rarr;</a>
+            <section class="goals-grid">
+                <div class="card goal-card">
+                    <div class="goal-info">
+                        <h3>New Car Fund</h3>
+                        <p class="goal-stats"><strong>$4,500</strong></p>
                     </div>
-                </article>
 
-                <article class="card article-card">
-                    <img src="images/budgeting.jpg" alt="Budgeting" class="article-img">
-                    <div class="article-body">
-                        <h3>Budgeting 101: The 50/30/20 Rule</h3>
-                        <p>Discover a simple way to devide your income between needs, wants, and your savings goals.</p>
-                        <a href="#" class="read-more">Read Article &rarr;</a>
-                    </div>
-                </article>
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
 
-                <article class="card article-card">
-                    <img src="images/compound-interest.jpg" alt="Savings" class="article-img">
-                    <div class="article-body">
-                        <h3>The Power of Compound Interest</h3>
-                        <p>See how starting your "Emergency Fund" early can lead to massive growth over the next 10 years.</p>
-                        <a href="#" class="read-more">Read Article &rarr;</a>
+                        <p class="goal-percentage">45% Complete</p>
+                        <p class="goal-deadline">Target Date: Dec 2026</p>
+                </div>
+
+                <div class="card-goal-card">
+                    <div class="goal-info">
+                        <h3>Emergency Fund</h3>
+                        <p class="goal-stats"><strong>$2,000.00</strong> of $5,000.00</p>
                     </div>
-                </article>
+
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <p class="goal-percentage">40% Complete</p>
+                    <p class="goal-deadline">Target Date: Ongoing</p>
+                </div>
+
+                <div class="card goal-card">
+                    <div class="goal-info">
+                        <h3>European Vacation</h3>
+                        <p class="goal-stats"><strong>$2,400.00</strong> 0f $3,000.00</p>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-bar" data-target="100%"></div>
+                    </div>
+
+                    <p class="goal-percentage">100% Complete</p>
+                </div>
             </section>                
         </main>
+
+        <aside class="alerts-sidebar">
+            <h3>Planning Tips</h3>
+            <div class="tip-card">
+                <p>User who set a specific target date are <strong>3x more likely</strong> to reach their goals!</p>
+            </div>
+        </aside>
     </div>
 
     <footer>

@@ -40,7 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             const badge = document.createElement('span');
                             badge.className = 'complete-badge';
                             badge.innerText = '🏆Goal Reached';
-                            card.querySelector('.goal-info').appendChild(badge)
+
+                            const goalInfo = card.querySelector('.goal-info');
+                            if (goalInfo) {
+                                goalInfo.appendChild(badge);
+                            }
 
                         }
                         
@@ -58,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const transferForm = document.getElementById('transfer-form');
 
     if (transferForm) {
-        transferForm.addEventListener('submit', (event) => {
-            event.preventDefault();
+        transferForm.addEventListener('submit', (e) => {
+            e.preventDefault();
 
             const amount = document.getElementById('amount').value;
             const recipient = document.getElementById('to-account').value;

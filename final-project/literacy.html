@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Garikai">
     <meta name="description" content="MobiBank+ Site: Secure mobile-first banking with integrated financial tracking.">
-    <title>MobiBank+ | Transfer & Pay</title>
 
-    <link rel="preconnect" href="https//fonts.googleapis.com">
-    <link rel="preconnect" href="https//fonts.gstatic.com " crossorigin>
-    <link rel="https//fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Garikai's Banking Dashboard">
+    <meta property="og:description" content="A secure and modern financial management dashboard.">
+    <meta property="og:image" content="https://garikai88.github.io/wdd231/images/site-preview.jpg">
+    <meta property="og:url" content="https://garikai88.github.io/wdd231/final-project/index.html">
+
+    <title>MobiBank+ | Financial Literacy</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
 
 
     <link rel="stylesheet" href="styles/styles.css">
@@ -17,7 +26,7 @@
 
 <body>
     <div id="side-overlay" class="overlay"></div>
-    
+
     <header>
         <div class="header-container">
             <button id="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
@@ -41,16 +50,16 @@
                         <a href="index.html">
                             <img src="images/home-icon.svg" alt="" width="20" height="20">Dashboard
                         </a>
-                    </li>
+                    </li> 
 
                    <li>
                         <a href="accounts.html">
                             <img src="images/wallet-icon.svg" alt="" width="20" height="20">Accounts
                         </a>
-                    </li> 
+                    </li>
 
                    <li>
-                        <a href="transfer.html" class="active" aria-current="page">
+                        <a href="transfer.html">
                             <img src="images/transfer-icon.svg" alt="" width="20" height="20">Payments
                         </a>
                     </li> 
@@ -62,7 +71,7 @@
                     </li> 
 
                    <li>
-                        <a href="literacy.html">
+                        <a href="literacy.html" class="active" aria-current="page">
                             <img src="images/book-icon.svg" alt="" width="20" height="20">Education
                         </a>
                     </li> 
@@ -71,56 +80,40 @@
         </aside>
 
         <main class="dashboard-main">
+            <h1>Financial Overview</h1>
             <section class="page-header">
-                <h2>Transfer Funds</h2>
+                <h2>Financial Education</h2>
             </section>
 
-            <section class="card form-card">
-                <form id="transfer-form">
-                    <div class="form-group">
-                        <label for="from-account">From Account</label>
-                        <select id="from-account" name="from-account" required>
-                            <option value="" disabled selected>Select an account</option>
-                            <option value="checking">Primary Checking (**** 4567) -$4,250.00</option>
-                            <option value="savings">High-Yeild Savings (**** 8821) -$8,200.00</option>
-                        </select>
+            <section class="literacy-content">
+                <article class="card article-card">
+                    <img src="images/security-tip.jpg" alt="Digital Security" class="article-img">
+                    <div class="article-body">
+                        <h3>5 Ways to Protect Your Account</h3>
+                        <p>Learn how to use Two-Factor Authentication (2FA) and recognize phishing attempts to keep your MobiBank+ data safe.</p>
+                        <a href="#" class="readmore">Read Article &rarr;</a>
                     </div>
+                </article>
 
-                        <div class="form-group">
-                            <label for="to-account">Recepient / Account Number</label>
-                            <input type="text" id="to-account" name="to-account" placeholder="Enter name, email, or account #">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="amount">Amount to Transfer</label>
-                            <div class="currency-input">
-                                <span class="currency-symbol">$</span>
-                                <input type="number" id="amount" name="amount" step="0.01" min="1" placeholder="0.00" required>
-                            </div>
-                        </div>    
-
-                    <div class="form-group">
-                        <label for="memo">Memo (Optional)</label>
-                        <input type="text" id="memo" name="memo" placeholder="e.g. Rent, Dinner, Groceries">
+                <article class="card article-card">
+                    <img src="images/budgeting.jpg" alt="Budgeting" class="article-img">
+                    <div class="article-body">
+                        <h3>Budgeting 101: The 50/30/20 Rule</h3>
+                        <p>Discover a simple way to devide your income between needs, wants, and your savings goals.</p>
+                        <a href="#" class="read-more">Read Article &rarr;</a>
                     </div>
+                </article>
 
-                    <div class="form-actions">
-                        <button type="submit" class="primary-btn">Review Transfer</button>
-                        <button type="reset" class="link-btn">Clear Form</button>
+                <article class="card article-card">
+                    <img src="images/compound-interest.jpg" alt="Savings" class="article-img">
+                    <div class="article-body">
+                        <h3>The Power of Compound Interest</h3>
+                        <p>See how starting your "Emergency Fund" early can lead to massive growth over the next 10 years.</p>
+                        <a href="#" class="read-more">Read Article &rarr;</a>
                     </div>
-                </form>
+                </article>
             </section>                
         </main>
-
-        <aside class="alerts-sidebar">
-            <h3>Recent Recipients</h3>
-            <ul class="recipient-list">
-                <li><strong>Landlord Inc.</strong><span>Saved Account</span></li>
-                <li><strong>Power Co.</strong><span>Utility</span></li>
-                <li><strong>Alex Rivera</strong><span>Internal Transfer</span></li>
-                </li>
-            </ul>
-        </aside>
     </div>
 
     <footer>
