@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="MobiBank+ Site: Secure mobile-first banking with integrated financial tracking.">
-    <title>MobiBank+ | Dashboard</title>
+    <title>MobiBank+ | Financial Literacy</title>
 
     <link rel="preconnect" href="https//fonts.googleapis.com">
     <link rel="preconnect" href="https//fonts.gstatic.com " crossorigin>
@@ -12,13 +12,12 @@
 
 
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/dashboard.js"></script>
     <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
-
     <div id="side-overlay" class="overlay"></div>
+    
     <header>
         <div class="header-container">
             <button id="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
@@ -27,7 +26,6 @@
             </div>
 
             <div class="user-profile">
-                <span class="user-name">Welcome, Garikai</span>
                 <img src="images/avatar.svg" alt="User Avatar" class="avatar-icon" width="40" height="40">                
             </div>           
 
@@ -40,7 +38,7 @@
             <nav aria-label="Main Navigation">
                 <ul>
                    <li>
-                        <a href="index.html" class="active" aria-current="page">
+                        <a href="index.html">
                             <img src="images/home-icon.svg" alt="" width="20" height="20">Dashboard
                         </a>
                     </li> 
@@ -49,7 +47,7 @@
                         <a href="accounts.html">
                             <img src="images/wallet-icon.svg" alt="" width="20" height="20">Accounts
                         </a>
-                    </li> 
+                    </li>
 
                    <li>
                         <a href="transfer.html">
@@ -64,7 +62,7 @@
                     </li> 
 
                    <li>
-                        <a href="literacy.html">
+                        <a href="literacy.html" class="active" aria-current="page">
                             <img src="images/book-icon.svg" alt="" width="20" height="20">Education
                         </a>
                     </li> 
@@ -74,66 +72,38 @@
 
         <main class="dashboard-main">
             <section class="page-header">
-                <h2>Account Overview</h2>
-                <p>Track your spending and balance at a glance.</p>
+                <h2>Financial Education</h2>
             </section>
 
-            <div class="summary-grid">
-                <div class="card balance-card">
-                    <h3>Total Balance</h3>
-                    <p class="amount">$12,450.00</p>
-                </div>
-
-                <div class="card goal-card">
-                    <div class="goal-info">
-                        <h3>New Car Fund</h3>
-                        <p class="goal-stats"><strong>$4,500.00</strong> of $10,000.00</p>
+            <section class="literacy-content">
+                <article class="card article-card">
+                    <img src="images/security-tip.jpg" alt="Digital Security" class="article-img">
+                    <div class="article-body">
+                        <h3>5 Ways to Protect Your Account</h3>
+                        <p>Learn how to use Two-Factor Authentication (2FA) and recognize phishing attempts to keep your MobiBank+ data safe.</p>
+                        <a href="#" class="readmore">Read Article &rarr;</a>
                     </div>
+                </article>
 
-
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 0%;"></div>
+                <article class="card article-card">
+                    <img src="images/budgeting.jpg" alt="Budgeting" class="article-img">
+                    <div class="article-body">
+                        <h3>Budgeting 101: The 50/30/20 Rule</h3>
+                        <p>Discover a simple way to devide your income between needs, wants, and your savings goals.</p>
+                        <a href="#" class="read-more">Read Article &rarr;</a>
                     </div>
+                </article>
 
-                    <p class="goal-percentage">45% Complete</p>
-                    <p class="goal-deadline">Target Date: Dec 2026</p>
-                </div>
-
-                <div class="card-goal-card">
-                    <div class="goal-info">
-                        <h3>Emergency Fund</h3>
-                        <p class="goal-stats"><strong>$2,000.00</strong> of $5,000.00</p>
+                <article class="card article-card">
+                    <img src="images/compound-interest.jpg" alt="Savings" class="article-img">
+                    <div class="article-body">
+                        <h3>The Power of Compound Interest</h3>
+                        <p>See how starting your "Emergency Fund" early can lead to massive growth over the next 10 years.</p>
+                        <a href="#" class="read-more">Read Article &rarr;</a>
                     </div>
-
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 0%"></div>
-                    </div>
-
-                    <p class="goal-percentage">40% Complete</p>
-                    <p class="goal-deadline">Target Date: Ongoing</p>
-                </div>
-
-                <div class="card goal-card">
-                    <div class="goal-info">
-                        <h3>European Vacation</h3>
-                        <p class="goal-stats"><strong>$2,400.00</strong> 0f $3,000.00</p>
-                    </div>
-
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="100%" style="width: 0%;"></div>
-                    </div>
-
-                    <p class="goal-percentage">100% Complete</p>
-                </div>
-            </div>                
+                </article>
+            </section>                
         </main>
-
-        <aside class="alerts-sidebar">
-            <h3>Planning Tips</h3>
-            <div class="tip-card">
-                <p>User who set a specific target date are <strong>3x more likely</strong> to reach their goals!</p>
-            </div>
-        </aside>
     </div>
 
     <footer>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="MobiBank+ Site: Secure mobile-first banking with integrated financial tracking.">
-    <title>MobiBank+ | Dashboard</title>
+    <title>MobiBank+ | Transfer & Pay</title>
 
     <link rel="preconnect" href="https//fonts.googleapis.com">
     <link rel="preconnect" href="https//fonts.gstatic.com " crossorigin>
@@ -12,13 +12,12 @@
 
 
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/dashboard.js"></script>
     <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
-
     <div id="side-overlay" class="overlay"></div>
+    
     <header>
         <div class="header-container">
             <button id="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
@@ -27,7 +26,6 @@
             </div>
 
             <div class="user-profile">
-                <span class="user-name">Welcome, Garikai</span>
                 <img src="images/avatar.svg" alt="User Avatar" class="avatar-icon" width="40" height="40">                
             </div>           
 
@@ -40,10 +38,10 @@
             <nav aria-label="Main Navigation">
                 <ul>
                    <li>
-                        <a href="index.html" class="active" aria-current="page">
+                        <a href="index.html">
                             <img src="images/home-icon.svg" alt="" width="20" height="20">Dashboard
                         </a>
-                    </li> 
+                    </li>
 
                    <li>
                         <a href="accounts.html">
@@ -52,7 +50,7 @@
                     </li> 
 
                    <li>
-                        <a href="transfer.html">
+                        <a href="transfer.html" class="active" aria-current="page">
                             <img src="images/transfer-icon.svg" alt="" width="20" height="20">Payments
                         </a>
                     </li> 
@@ -74,65 +72,54 @@
 
         <main class="dashboard-main">
             <section class="page-header">
-                <h2>Account Overview</h2>
-                <p>Track your spending and balance at a glance.</p>
+                <h2>Transfer Funds</h2>
             </section>
 
-            <div class="summary-grid">
-                <div class="card balance-card">
-                    <h3>Total Balance</h3>
-                    <p class="amount">$12,450.00</p>
-                </div>
-
-                <div class="card goal-card">
-                    <div class="goal-info">
-                        <h3>New Car Fund</h3>
-                        <p class="goal-stats"><strong>$4,500.00</strong> of $10,000.00</p>
+            <section class="card form-card">
+                <form id="transfer-form">
+                    <div class="form-group">
+                        <label for="from-account">From Account</label>
+                        <select id="from-account" name="from-account" required>
+                            <option value="" disabled selected>Select an account</option>
+                            <option value="checking">Primary Checking (**** 4567) -$4,250.00</option>
+                            <option value="savings">High-Yeild Savings (**** 8821) -$8,200.00</option>
+                        </select>
                     </div>
 
+                        <div class="form-group">
+                            <label for="to-account">Recepient / Account Number</label>
+                            <input type="text" id="to-account" name="to-account" placeholder="Enter name, email, or account #">
+                        </div>
 
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 0%;"></div>
+                        <div class="form-group">
+                            <label for="amount">Amount to Transfer</label>
+                            <div class="currency-input">
+                                <span class="currency-symbol">$</span>
+                                <input type="number" id="amount" name="amount" step="0.01" min="1" placeholder="0.00" required>
+                            </div>
+                        </div>    
+
+                    <div class="form-group">
+                        <label for="memo">Memo (Optional)</label>
+                        <input type="text" id="memo" name="memo" placeholder="e.g. Rent, Dinner, Groceries">
                     </div>
 
-                    <p class="goal-percentage">45% Complete</p>
-                    <p class="goal-deadline">Target Date: Dec 2026</p>
-                </div>
-
-                <div class="card-goal-card">
-                    <div class="goal-info">
-                        <h3>Emergency Fund</h3>
-                        <p class="goal-stats"><strong>$2,000.00</strong> of $5,000.00</p>
+                    <div class="form-actions">
+                        <button type="submit" class="primary-btn">Review Transfer</button>
+                        <button type="reset" class="link-btn">Clear Form</button>
                     </div>
-
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 0%"></div>
-                    </div>
-
-                    <p class="goal-percentage">40% Complete</p>
-                    <p class="goal-deadline">Target Date: Ongoing</p>
-                </div>
-
-                <div class="card goal-card">
-                    <div class="goal-info">
-                        <h3>European Vacation</h3>
-                        <p class="goal-stats"><strong>$2,400.00</strong> 0f $3,000.00</p>
-                    </div>
-
-                    <div class="progress-container">
-                        <div class="progress-bar" data-target="100%" style="width: 0%;"></div>
-                    </div>
-
-                    <p class="goal-percentage">100% Complete</p>
-                </div>
-            </div>                
+                </form>
+            </section>                
         </main>
 
         <aside class="alerts-sidebar">
-            <h3>Planning Tips</h3>
-            <div class="tip-card">
-                <p>User who set a specific target date are <strong>3x more likely</strong> to reach their goals!</p>
-            </div>
+            <h3>Recent Recipients</h3>
+            <ul class="recipient-list">
+                <li><strong>Landlord Inc.</strong><span>Saved Account</span></li>
+                <li><strong>Power Co.</strong><span>Utility</span></li>
+                <li><strong>Alex Rivera</strong><span>Internal Transfer</span></li>
+                </li>
+            </ul>
         </aside>
     </div>
 
