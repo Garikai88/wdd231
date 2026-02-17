@@ -1,83 +1,80 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // Data Definition
+    const transactions = [
+        {date: "2026-02-10", desc: "Weekly Groceries", cat: "Food", amt: -120.50, status: "Completed" },
+        {date: "2026-02-11", desc: "Electric Bill", cat: "Utilities", amt: -45.00, status: "Pending" },
+        {date: "2026-02-12", desc: "Dinner Out", cat: "Dining", amt: -15.25, status: "Completed" },
+        {date: "2026-02-13", desc: "Montly Rent", cat: "Housing", amt: -1200.00, status: "Completed" },
+        {date: "2026-02-14", desc: "Bus Pass", cat: "Transport", amt: -10.00, status: "Completed" },
+        {date: "2026-02-14", desc: "New Shoes", cat: "Shopping", amt: -55.60, status: "Completed" },
+        {date: "2026-02-15", desc: "Movie Ticket", cat: "Fun", amt: -18.99, status: "Pending" },
+        {date: "2026-02-15", desc: "Morning Coffee", cat: "Dining", amt: -5.00, status: "Completed" },
+        {date: "2026-02-15", desc: "Car Insurance", cat: "Bills", amt: -150.50, status: "Completed" },
+        {date: "2026-02-16", desc: "Internet", cat: "Utilities", amt: -65.00, status: "Completed" },
+        {date: "2026-02-16", desc: "Paycheck", cat: "Income", amt: +2500.00, status: "Completed" },
+        {date: "2026-02-16", desc: "Lunch", cat: "Dining", amt: -12.50, status: "Completed" },
+        {date: "2026-02-16", desc: "Uber Ride", cat: "Transport", amt: -22.00, status: "Pending" },
+        {date: "2026-02-16", desc: "Gas Station", cat: "Transport", amt: -42.10, status: "Completed" },
+        {date: "2026-02-16", desc: "Netflix", cat: "Sub", amt: -18.00, status: "Completed" },
+    ];
 
-    // Mobile Menu Toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.querySelector('.sidebar-nav');
-    const overlay = document.getElementById('sidebar-overlay');
+    // Table rendering by using the DOM manipulation and tempplate literals
+    const tableBody = document.getElementById('transaction-body');
 
-    if (menuToggle && nav && overlay) {
-        menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('show');
-            overlay.classList.toggle('active');
-        });
+    function renderTransactions(data) {
+        if (!tableBody) return;
+        tableBody.innerHTML = "";
 
-        overlay.addEventListener('click', () => {
-            nav.classList.remove('show');
-            overlay.classList.remove('active');
-        });
-    }
-
-    // Handling goal progress animation
-    const animateBars = () => {
-        const progressBars = document.querySelectorAll('.progress-bar');
-
-        setTimeout(() => {
-            progressBars.forEach(bar => {
-                const target = bar.getAttribute('data-target');
-                if (target) {
-                    bar.style.width = target;
-
-                    // Checking if the goal is 100%
-                    if (target === "100%") {
-                        //Finding the closest parent card to add a success style
-                        const card = bar.closest('.goal-card');
-                        if (card) {
-                            card.classList.add('goal-completed');
-                        }
-
-                        // Adding a small "Completed!" badge dynamically
-                        if (!card.querySelector('.complete-badge')){
-                            const badge = document.createElement('span');
-                            badge.className = 'complete-badge';
-                            badge.innerText = '🏆Goal Reached';
-
-                            const goalInfo = card.querySelector('.goal-info');
-                            if (goalInfo) {
-                                goalInfo.appendChild(badge);
-                            }
-
-                        }
-                        
-
-                    }
-                }
-            });
-        }, 100);
-    };
-
-    // To call the animations to run
-    animateBars();
-
-    // Transfer Form Submission
-    const transferForm = document.getElementById('transfer-form');
-
-    if (transferForm) {
-        transferForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const amount = document.getElementById('amount').value;
-            const recipient = document.getElementById('to-account').value;
-
-            alert(`Success! $${amount} has been sent to ${recipient}.`);
-
-            //Changing .requestFullscreen() (incorrect) to .reset()
-            transferForm.reset();
+        data.forEach(item =>  {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.date}</td>
+                <td>${item.desc}</td>
+                <td>${item.cat}</td>
+                <td class="${item.amt > 0 ? 'pos' : 'neg'}">$${Math.abs(item.amt).toFixed(2)}</td>
+            `;
+            tableBody.appendChild(row);
+            
         });
     }
 
-    //Updating Last Modified Date 
+    // We then call the function
+    renderTransactions(transactions);
+
+    // Modal dialog logic
+    const helpModal = document.getElementById('help-modal');
+    const openModalBtn = document.getElementById('open-help');
+    const closeModalBtn = document.getElementById('close-help');
+
+    if (helpModal && openModalBtn && closeModalBtn) {
+        openModalBtn.addEventListener('click', () => helpModal.showModal());
+        closeModalBtn.addEventListener('click', () => helpModal.close());
+    }
+
+    // Form action logic for the thankyou.html 
+    const displayArea = document.getElementById('details');
+    if (displayArea) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const amount = urlParams.get('amount');
+        const recipient = urlParams.get('recipient');
+
+        const recipientSpan = document.getElementById('display-recipient');
+        const amountSpan = document.getElementById('display-amount');
+        const idSpan = document.getElementById('display-id');
+
+        if (amount && recipient) {
+            if (recipientSpan) recipientSpan.textContent = recipient;
+            if (amountSpan) amountSpan.textContent = `$${parseFloat(amount).toFixed(2)}`;
+            if (idSpan) idSpan.textContent = `MB-${Math.floor(Math.random() * 1000000)}`;
+        }
+    }
+
+    // Local Storage & Footer
+    localStorage.setItem('lastVisit', new Date().toLocaleString());
     const lastModSpan = document.getElementById('lastModified');
     if (lastModSpan) {
         lastModSpan.textContent = document.lastModified;
     }
 });
+

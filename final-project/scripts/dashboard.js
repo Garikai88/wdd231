@@ -1,34 +1,24 @@
-// Transaction Data 
-const transactions = [
-    {
-        date: "2026-02-10",
-        desc: "Pick n Pay Harare",
-        cat: "Groceries",
-        amt: -45.50
-    },
 
-    {
-        date: "2026-02-11",
-        desc: "Zesa Prepaid",
-        cat: "Utilities",
-        amt: -20.00
-    },
 
-    {
-        date: "2026-02-12",
-        desc: "Freelance Payment",
-        cat: "Income",
-        amt: 500.00
-    },
+function displayTransactions(data) {
+    const container = document.getElementById('transaction-list');
+    if (!container) return;
 
-    {
-        date: "2026-02-13",
-        desc: "Mbare Market",
-        cat: "Food",
-        amt: -15.25
-    }
+    container.innerHTML = "";
 
-];
+    data.forEach(item => {
+        const row = `
+            <div class="transaction-item">
+                <span class="t-date">${item.date}</span>
+                <span class="t-cat">${item.category}</span>
+                <span class="t-amount">${item.amount.toFixed(2)}</span>
+                <span class="t-status status-${item.status.toLowerCase()}">${item.status}</span>
+            </div>
+        `;
+        container.innerHTML += row;
+
+    });
+}
 
 // Select the table Body from HTML
 const tableBody = document.getElementById('transaction-body');

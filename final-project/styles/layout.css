@@ -1,134 +1,5 @@
-:root {
-    --primary-blue: #003366;
-    --secondary-green: #2E8B57;
-    --bg-white: #ffffff;
-    --text-dark: #333333;
-    --light-gray: #f4f7f9;
-    --border-color: #dddddd;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: var(--bg-white);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Roboto', sans-serif;
-    color: var(--primary-blue);
-}
-
-/* Header and Top Nav */
-header {
-    background-color: var(--bg-white);
-    border-bottom: 1px solid var(--border-color);
-    padding: 1rem 5%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#menu-toggle {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--primary-blue);
-}
-
-.logo img {
-    height: 40px;
-    width: auto;
-}
-
-.avatar-icon {
-    border-radius: 50%;
-    border: 2px solid var(--secondary-green);
-}
-
-/* Mobile-First Layout (One Column) */
-.app-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Hide sidebars on small screens per wideframe */
-.side-nav, 
-.alerts-sidebar {
-    display: none;
-}
-
-/* Dashboard Components */
-.summary-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
-
-.card {
-    background: var(--bg-white);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.balance-amount { font-size: 1.8rem; font-weight: bold;}
-.spending-amount { color: #d9534f; font-weight: bold;}
-.goal-status { color: var(--secondary-green); font-weight: bold;}
-
-.quick-actions {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-}
-
-.action-btn {
-    background-color: var(--secondary-green);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-
-/* Table Styles */
-.table-container {
-    overflow-x: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-th, td {
-    text-align: left;
-    padding: 12px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-th {
-    background-color: var(--light-gray);
-    color: var(--primary-blue);
-}
 
 /* Desktop Layout (Three Columns) */
 @media (min-width: 1024px) {
@@ -190,28 +61,7 @@ th {
     .quick-actions {display: none;}
 }
 
-/* Layout Container */
-.accounts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem 0;
-}
 
-/* Individual Account Cards */
-.account-detail {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border: 1px solid #e0e0e0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.account-detail:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
 
 /* Card Header (Icon and Title) */
 .account-header {
@@ -248,6 +98,7 @@ th {
     color: #2c3e50;
     margin-bottom: 1.5rem;
 }
+
 
 /* Action Buttons */
 .account-actions {
@@ -299,6 +150,7 @@ th {
     font-family: inherit;
 }
 
+
 /* Specific styling for the $ symbol inside the input area */
 .currency-input {
     position: relative;
@@ -332,6 +184,7 @@ th {
     text-decoration: underline;
     cursor: pointer;
 }
+
 
 /* Primary Action Button */
 .primary-btn {
@@ -392,6 +245,7 @@ th {
     margin-bottom: 0.5rem;
 }
 
+
 /* The Blue Filling of the bar */
 .progress-bar {
     background-color: #0056b3;
@@ -435,6 +289,8 @@ th {
     0% { transform: scale(0); opacity: 0; }
     100% { transform: scale(1); opacity: 1; } 
 }
+
+
 
 /* This will make the 100% bar green instead */
 .goalcompleted .progress-bar {
@@ -492,90 +348,3 @@ th {
 .overlay.active {
     display: block;
 }
-
-/* Footer Grid */
-footer {
-    background-color: var(--light-gray);
-    padding: 40px 5% 20px;
-    margin-top: 50px;
-    border-top: 1px solid var(--border-color);
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.footer-col h4 { margin-bottom: 15px; }
-.footer-col ul { list-style: none; }
-.footer-col a { text-decoration: none; color: var(--text-dark); }
-
-.social-icons img {
-    margin-right: 10px;
-    transition: transform 0.2s;
-}
-
-.social-icons img:hover { transform: scale(1.1); }
-
-.copyright {
-    text-align: center;
-    font-size: 0.8rem;
-    border-top: 1px solid var(--border-color);
-    padding: 20px;
-}
-
-@media (max-width: 768px) {
-    .sidebar-nav {
-        position: fixed;
-        top: 0;
-        left: -250px;
-        width: 250px;
-        height: 100%;
-        background-color: #ffffff;
-        z-index: 1000;
-        box-shadow: 2px 0 5px rgba(0,0,0,0.2); 
-
-        /* The secret sauce; smooth transition */
-        transition: transform 0.3s ease-in-out;
-    }
-
-    /* When the 'show' class is added via JS, the slide will follow */
-    .sidebar-nav.show {
-        transform: translateY(250px);
-    }
-
-    /* We now make links stack vertically and look like buttons */
-    .sidebar-nav ul {
-        flex-direction: column;
-        padding: 2rem 1rem;
-    }
-
-    .sidebar-nav li {
-        margin-bottom: 1.5rem; 
-    }
-
-}
-
-/* Mobile adjustments */
-@media (max-width: 600px) {
-    .article-card {
-        flex-direction: column;
-    }
-
-    .article-img {
-        width: 100%;
-        height: 150px;
-    }
-}
-
-
-
-
-
-
-
-
-
-

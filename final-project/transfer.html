@@ -20,7 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/layout.css">
     <script src="scripts/main.js" defer></script>
 </head>
 
@@ -35,6 +36,7 @@
             </div>
 
             <div class="user-profile">
+                <span class="user-name">Welcome, Garikai</span>
                 <img src="images/avatar.svg" alt="User Avatar" class="avatar-icon" width="40" height="40">                
             </div>           
 
@@ -75,51 +77,59 @@
                             <img src="images/book-icon.svg" alt="" width="20" height="20">Education
                         </a>
                     </li> 
+
+                    <li>
+                        <a href="thankyou.html">
+                            <img src="images/thank-you.svg" alt="" width="20" height="20">thank you
+                        </a>
+                    </li> 
                 </ul>
             </nav>
         </aside>
 
         <main class="dashboard-main">
-            <h1>Financial Overview</h1>
+            <h1>Transfer Funds</h1>
             <section class="page-header">
-                <h2>Transfer Funds</h2>
+                <p>Move money between accounts or send to a contact.</p>
             </section>
 
             <section class="card form-card">
-                <form id="transfer-form">
+                <form id="transfer-form" action="thankyou.html" method="get">
+
+
                     <div class="form-group">
                         <label for="from-account">From Account</label>
                         <select id="from-account" name="from-account" required>
                             <option value="" disabled selected>Select an account</option>
-                            <option value="checking">Primary Checking (**** 4567) -$4,250.00</option>
-                            <option value="savings">High-Yeild Savings (**** 8821) -$8,200.00</option>
+                            <option value="checking">Primary Checking (**** 4567) - $4,250.00</option>
+                            <option value="savings">High-Yield Savings (**** 8821) - $8,200.00</option>
                         </select>
                     </div>
 
-                        <div class="form-group">
-                            <label for="to-account">Recepient / Account Number</label>
-                            <input type="text" id="to-account" name="to-account" placeholder="Enter name, email, or account #">
-                        </div>
+                    <div class="form-group">
+                        <label for="to-account">Recipient / Account Number</label>
+                        <input type="text" id="to-account" name="recipient" placeholder="Enter name or account #" required>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="amount">Amount to Transfer</label>
-                            <div class="currency-input">
-                                <span class="currency-symbol">$</span>
-                                <input type="number" id="amount" name="amount" step="0.01" min="1" placeholder="0.00" required>
-                            </div>
-                        </div>    
+                    <div class="form-group">
+                        <label for="amount">Amount to Transfer</label>
+                        <div class="currency-input">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="amount" name="amount" step="0.01" min="1" placeholder="0.00" required>
+                        </div>
+                    </div>
 
                     <div class="form-group">
                         <label for="memo">Memo (Optional)</label>
-                        <input type="text" id="memo" name="memo" placeholder="e.g. Rent, Dinner, Groceries">
+                        <input type="text" id="memo" name="memo" placeholder="e.g. Rent, Dinner">
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="primary-btn">Review Transfer</button>
+                        <button type="submit" class="primary-btn">Confirm Transfer</button>
                         <button type="reset" class="link-btn">Clear Form</button>
                     </div>
                 </form>
-            </section>                
+            </section>              
         </main>
 
         <aside class="alerts-sidebar">
