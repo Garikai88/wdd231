@@ -24,19 +24,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderTransactions(data) {
         if (!tableBody) return;
-        tableBody.innerHTML = "";
+        let tableRows = "";
 
         data.forEach(item =>  {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${item.date}</td>
-                <td>${item.desc}</td>
-                <td>${item.cat}</td>
-                <td class="${item.amt > 0 ? 'pos' : 'neg'}">$${Math.abs(item.amt).toFixed(2)}</td>
+            tableRows += `
+                <tr>
+                    <td>${item.date}</td>
+                    <td>${item.desc}</td>
+                    <td>${item.cat}</td>
+                    <td class="${item.amt > 0 ? 'pos' : 'neg'}">$${Math.abs(item.amt).toFixed(2)}</td>
+                </tr>
             `;
-            tableBody.appendChild(row);
             
         });
+
+        // Updating the DOM once
+        tableBody.innerHTML = tableRows;
     }
 
     // We then call the function
@@ -50,6 +53,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (helpModal && openModalBtn && closeModalBtn) {
         openModalBtn.addEventListener('click', () => helpModal.showModal());
         closeModalBtn.addEventListener('click', () => helpModal.close());
+    }
+
+    // Mobile Logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar-nav');
+    const overlay = document.getElementById('side-overlay');
+
+    if (menuToggle && sidebar && overlay) {
+        const toggleMenu = () => {
+            const isOpening = !sidebar.classList.contains('show');
+            sidebar.classList.toggle('show');
+            overlay.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', isOpening);
+        };
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        //Side bar closes when a link is clicked
+        sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('show');
+                overlay.classList.remove('active');
+            });
+        });
     }
 
     // Form action logic for the thankyou.html 
@@ -76,5 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lastModSpan) {
         lastModSpan.textContent = document.lastModified;
     }
+});
+
+//Animating Progress Bars on Dashboard
+const progressBars = document.querySelectorAll('progress-bar');
+progressBars.forEach(bar => {
+    const target = bar.getAttribute('data-target');
+    setTimeout(() => {
+        bar.computedStyleMap.width = target;
+    }, 500);
 });
 

@@ -26,18 +26,19 @@
 
 <body>
     <main class="thank-you-container">
-        <div class="success-icon">✅</div>
-        <h1>Transfer Successful</h1>
-        <p>Your funds have been securely moved</p>
+        <div class="card thank-you-card">
+            <div class="success-icon">✅</div>
+            <h1>Transfer Successful</h1>
+            <p>Your funds have been securely moved</p>
 
-        <div id="details" class="details-box">
-            <p><strong>Recepient:</strong> <span id="display-recipient">Loading....</span></p>
-            <p><strong>Amount:</strong> <span id="display-amount">0.00</span></p>
-            <p><strong>Transaction ID:</strong> <span id="display-id"></span></p>
+            <div id="details" class="details-box">
+                <p><strong>Recipient:</strong> <span id="display-recipient">Loading....</span></p>
+                <p><strong>Amount:</strong> <span id="display-amount">0.00</span></>
+                <p><strong>Transaction ID:</strong> <span id="display-id"></span></p>
+            </div>
+
+            <a href="index.html" class="home-btn">Return to Dashboard</a>
         </div>
-
-        <a href="index.html" class="home-btn">Return to Dashboard</a>
-
     </main>
 
     
@@ -53,14 +54,22 @@
 
             <div class="footer-col">
                 <h4>Legal</h4>
-                <p>Privacy Policy</p>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Social Media</h4>
+                <h4>Connect</h4>
                 <div class="social-icons">
-                    <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
-                    <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                    <a href="#" aria-label="Facebook">
+                        <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+
+                        <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                    </a>
                 </div>
             </div>
         </div>
